@@ -1,0 +1,32 @@
+.master-head.professional.fade-in.fade1
+  .info(layout="row", layout-align="center end")
+    p Revisa mis proyectos profesionales a través de mi experiencia laboral
+md-content.fade-in.fade2
+  md-card
+    md-card-content
+      .info-card
+        h2 Adesis Netlife - Desarrollador Front
+        small Sep. 2012 - Actualidad
+        p
+          img.photo(src="src/images/adesis.jpg", alt="Adesis Netlife")
+          | Mi desempeño en Adesis fue en un principio el de dar apoyo al equipo de Front en los desarrollos de los proyectos, planificación de tareas y en la resolución de incidencias.
+        p Hoy en día colaboro activamente en los proyectos utilizando novedosas tecnologías de desarrollo web como son JADE, AngularJS, NodeJS, ...
+        p En cuanto a mi actual desempeño en la empresa estoy participando en un proyecto para una importante entidad financiera. Participo en el desarrollo de la arquitectura horizontal que dará soporte a las aplicaciones que se crearán después.
+        p Me centro sobre todo en el desarrollo de componentes web mediante directivas de AngularJS que servirán para montar las aplicaciones de la empresa.
+md-content.fade-in.fade3(layout="row", layout-wrap)
+  div(ng-repeat="project in projects.professional",
+    layout-sm,
+    flex-gt-sm="50",
+    flex-md="50",
+    flex-gt-md="33",
+    flex-lg="33",
+    flex-gt-lg="25")
+    md-card
+      img(ng-src="{{project.image}}", alt="{{project.title}}")
+      md-card-content
+        h2.project-name {{project.title}}
+        small {{project.company}}
+        .info-card.project-card
+          p {{project.notes}}
+        .info-card(layout="row", layout-align="end end")
+          md-button.md-accent.md-raised(ng-click="showDialog($event, project.dialogTemplate)") Saber más
