@@ -15,6 +15,10 @@ $pieColor6: #9E9E9E;
 @import "pie";
 @import "animations";
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 /* http://www.google.com/fonts/specimen/Comfortaa#charset */
 @font-face {
   font-family: 'Comfortaa';
@@ -52,7 +56,9 @@ md-toolbar {
 
 .menu-background {
   background-image: url('src/images/menu.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position-y: -25px;
+
 }
 
 .menu-option-icon {
@@ -105,7 +111,7 @@ md-toolbar {
     height: 200px;
     // background-color: #4DB6AC;
     color: white;
-    background-size: 100% 100%;
+    background-size: cover;
     background-color: $banner-color;
     &.home {
       background-image: url('src/images/banners/home.jpg');

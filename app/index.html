@@ -19,8 +19,8 @@
     <!-- endbuild -->
   </head>
 
-  <body ng-app="starterApp" layout="column" class="fade-in fade1" ng-controller="AppCtrl">
-    <md-toolbar ng-cloak class="fade-in fade1">
+  <body ng-app="starterApp" layout="column" ng-cloak class="fade-in fade2" ng-controller="AppCtrl">
+    <md-toolbar class="fade-in fade1">
       <div class="menutabs-container" hide show-gt-md>
         <md-tabs md-selected="selectedIndex">
           <md-tab ng-repeat="tab in paths | orderBy:'index'">
@@ -55,7 +55,7 @@
 
     </md-toolbar>
 
-    <md-sidenav  ng-cloak class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-close="$media('gt-sm')">
+    <md-sidenav  class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-close="$media('gt-sm')">
       <md-toolbar class="sidemenu-head md-default-theme md-hue-2 menu-background">
         <h1 class="visuallyhidden md-toolbar-tools">
           <span>Menú</span>
