@@ -12,7 +12,7 @@
     "gulp-cssmin": "~0.1.7",
     "gulp-debug": "~2.0.1",
     "gulp-htmlmin": "~1.1.1",
-    "gulp-imagemin": "~2.2.1",
+    "gulp-imagemin": "2.2.0",
     "gulp-jade": "~1.0.0",
     "gulp-jade-inheritance": "~0.5.1",
     "gulp-rev": "^4.0.0",
