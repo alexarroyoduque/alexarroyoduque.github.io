@@ -32,19 +32,21 @@ gulp.task('styles', function () {
         .pipe(gulp.dest(path.css));
 });
 
-gulp.task('jade', function() {
-    var options = {pretty: true}
+gulp.task('jade', function () {
+    var options = {
+        pretty: true
+    }
     gulp.src(path.jade)
         .pipe(jade())
         .pipe(jade(options))
         .pipe(gulp.dest(path.html));
 });
 
-gulp.task('watch-jade', function() {
+gulp.task('watch-jade', function () {
     gulp.watch(path.jade, ['jade']);
 });
 
-gulp.task('watch-styles', function() {
+gulp.task('watch-styles', function () {
     gulp.watch(path.styles, ['styles']);
 });
 
@@ -57,12 +59,16 @@ gulp.task('webserver', function () {
 });
 
 gulp.task('clean-views', function () {
-    return gulp.src(path.html, {read: false})
+    return gulp.src(path.html, {
+            read: false
+        })
         .pipe(clean());
 });
 
 gulp.task('clean-dist', function () {
-    return gulp.src(path.dist, {read: false})
+    return gulp.src(path.dist, {
+            read: false
+        })
         .pipe(clean());
 });
 
@@ -84,14 +90,18 @@ gulp.task('dist-images', function () {
     return gulp.src(path.images)
         .pipe(imagemin({
             progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
             use: [pngquant()]
         }))
         .pipe(gulp.dest(path.dist + '/src/images'));
 });
 
-gulp.task('dist-jade', function() {
-    var options = {pretty: false}
+gulp.task('dist-jade', function () {
+    var options = {
+        pretty: false
+    }
     gulp.src(path.jade)
         .pipe(jade())
         .pipe(jade(options))
@@ -109,7 +119,7 @@ gulp.task('dist-scripts', function () {
         .pipe(gulp.dest(path.dist + '/src/scripts/components.js'));
 });
 
-gulp.task('dist-bower', function() {
+gulp.task('dist-bower', function () {
     gulp.src([
         path.app + '/bower_components/angular/angular.min.js',
         path.app + '/bower_components/angular-animate/angular-animate.min.js',
@@ -117,18 +127,22 @@ gulp.task('dist-bower', function() {
         path.app + '/bower_components/angular-material/angular-material.min.js',
         path.app + '/bower_components/angular-route/angular-route.min.js'])
         .pipe(concat('lib.min.js'))
-        .pipe(uglify({mangle: false}))
+        .pipe(uglify({
+            mangle: false
+        }))
         .pipe(gulp.dest(path.dist + '/src/scripts/'));
 });
 
-gulp.task('dist-scripts', function() {
+gulp.task('dist-scripts', function () {
     gulp.src([
         path.app + '/src/js/konami.js',
         '/app.js',
         path.app + '/src/js/infoService.js',
         path.app + '/src/js/directives.js'])
         .pipe(concat('scripts.min.js'))
-        .pipe(uglify({mangle: false}))
+        .pipe(uglify({
+            mangle: false
+        }))
         .pipe(gulp.dest(path.dist + '/src/scripts/'));
 });
 

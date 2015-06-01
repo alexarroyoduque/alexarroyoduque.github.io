@@ -96,6 +96,12 @@
         }];
 
         personal = [{
+            title: 'Gau el experto',
+            image: 'src/images/personal/gau.jpg',
+            detail: '2015',
+            notes: 'Aventura interactiva donde el protagonista es un experto en tecnología.',
+            dialogTemplate: 'views/personal/gau.html'
+        }, {
             title: 'Egypt Adventure',
             image: 'src/images/personal/egypt-adventure.jpg',
             detail: '2014 - 2015',
