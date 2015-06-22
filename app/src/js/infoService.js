@@ -25,6 +25,10 @@
             image: 'src/images/skills/angular.jpg',
             notes: 'HTML mejorado para aplicaciones web alucinantes'
         }, {
+            what: 'Polymer',
+            image: 'src/images/skills/polymer.jpg',
+            notes: 'Framework de desarrollo para crear web components.'
+        }, {
             what: 'PhaserJS',
             image: 'src/images/skills/phaser.jpg',
             notes: 'Framework rápido y divertido para hacer juegos HTML5 para escritorio y móviles'
@@ -96,6 +100,12 @@
         }];
 
         personal = [{
+            title: 'Master Gun',
+            image: 'src/images/personal/master-gun.jpg',
+            detail: '2015',
+            notes: 'Shooter al estilo western hecho con Polymer.',
+            dialogTemplate: 'views/personal/gau.html'
+        }, {
             title: 'Gau el experto',
             image: 'src/images/personal/gau.jpg',
             detail: '2015',
