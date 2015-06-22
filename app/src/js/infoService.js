@@ -104,7 +104,7 @@
             image: 'src/images/personal/master-gun.jpg',
             detail: '2015',
             notes: 'Shooter al estilo western hecho con Polymer.',
-            dialogTemplate: 'views/personal/gau.html'
+            dialogTemplate: 'views/personal/master-gun.html'
         }, {
             title: 'Gau el experto',
             image: 'src/images/personal/gau.jpg',
