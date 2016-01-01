@@ -100,6 +100,13 @@
         }];
 
         personal = [{
+            title: 'Shootem Totem',
+            image: 'src/images/personal/shootem-totem.jpg',
+            detail: '2016',
+            notes: 'Shoot´em up frenético. Se puede usar el móvil como controlador mandando ordenes por websockets a la nave.',
+            dialogTemplate: 'views/personal/shootem-totem.html'
+        },
+        {
             title: 'Master Gun',
             image: 'src/images/personal/master-gun.jpg',
             detail: '2015',
@@ -144,12 +151,6 @@
         }];
 
         secrets = [{
-            title: 'Shootem Totem',
-            image: 'src/images/personal/shootem-totem.jpg',
-            detail: 'Próximamente (2015)',
-            notes: 'Primer contacto con Unity en un shootem up multijugador.',
-            dialogTemplate: 'views/personal/shootem-totem.html'
-        }, {
             title: 'Cromos de Egypt Adventure',
             image: 'src/images/personal/egypt-adventure-cards.jpg',
             detail: '2015',
