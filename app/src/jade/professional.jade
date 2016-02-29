@@ -22,7 +22,7 @@ md-content.fade-in.fade3(layout="row", layout-wrap)
     flex-lg="33",
     flex-gt-lg="25")
     md-card
-      img(ng-src="{{project.image}}", alt="{{project.title}}")
+      img.project-image(ng-src="{{project.image}}", alt="{{project.title}}")
       md-card-content
         h2.project-name {{project.title}}
         small {{project.company}}

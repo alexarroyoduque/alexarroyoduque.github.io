@@ -233,10 +233,15 @@ md-dialog.custom-dialog md-content {
   height: 90%;
 }
 
+.project-image {
+  height: 240px;
+}
+
 @media only screen and (min-width : 480px) and (max-width : 600px) {
   .master-head {
     height: 320px;
   }
+
 }
 
 @media only screen and (min-width : 600px) and (max-width : 1024px) {
