@@ -100,6 +100,13 @@
         }];
 
         personal = [{
+            title: 'Master Wars',
+            image: 'src/images/personal/master-wars.jpg',
+            detail: '2016',
+            notes: 'Experimento con React y la Api pública de Marvel. ¿Cuánto sabes del universo Marvel?',
+            dialogTemplate: 'views/personal/master-wars.html'
+        },
+        {
             title: 'Shootem Totem',
             image: 'src/images/personal/shootem-totem.jpg',
             detail: '2016',
