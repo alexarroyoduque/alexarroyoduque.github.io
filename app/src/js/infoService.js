@@ -173,7 +173,7 @@
 
         professional = [{
             title: 'Bankia - Arquitectura componentes',
-            company: 'Adesis Netlife, 2013 - Actualidad',
+            company: 'Adesis Netlife, GFT 2013 - 2016',
             image: 'src/images/professional/bankia.jpg',
             notes: 'Sentar las bases de una arquitectura basada en tecnologías web modernas que permita crear aplicaciones de forma ágil',
             dialogTemplate: 'views/professional/bankia.html'
