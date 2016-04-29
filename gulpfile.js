@@ -169,6 +169,11 @@ gulp.task('build', [
     'dist-index'
 ]);
 
+gulp.task('pro', function () {
+    gulp.src(path.dist + '/**')
+        .pipe(gulp.dest('./'));
+});
+
 gulp.task('default', ['serve']);
 gulp.task('clean', ['clean-dist']);
 gulp.task('dist', ['build']);
