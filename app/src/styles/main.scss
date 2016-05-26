@@ -263,6 +263,9 @@ md-dialog.custom-dialog md-content {
     width: 45%;
     height: 45%;
   }
+  .project-image {
+    height: 240px;
+  }
 }
 
 @media only screen and (min-width : 1024px) {
@@ -278,10 +281,13 @@ md-dialog.custom-dialog md-content {
     width: 170px;
   }
   .info-card.project-card {
-    min-height: 170px;
+    min-height: 140px;
   }
   .egypt-adveture-card {
     width: 45%;
     height: 45%;
+  }
+  .project-image {
+    height: 280px;
   }
 }
