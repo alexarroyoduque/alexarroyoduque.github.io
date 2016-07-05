@@ -189,6 +189,12 @@
         }];
 
         professional = [{
+            title: 'BBVA - Cells Apps',
+            company: 's|ngular, 2016',
+            image: 'src/images/professional/bbva-cells.jpg',
+            notes: 'Cells es la nueva propuesta de BBVA para el desarrollo front. Soporte a las aplicaciones desarrolladas con Cells.',
+            dialogTemplate: 'views/professional/bbva-cells-apps.html'
+        }, {
             title: 'Bankia - Arquitectura componentes',
             company: 'Adesis Netlife, GFT 2013 - 2016',
             image: 'src/images/professional/bankia.jpg',
