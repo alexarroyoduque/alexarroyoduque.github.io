@@ -113,6 +113,12 @@
             notes: 'He participado impartiendo charlas sobre videojuegos en el meetup VGA.',
             dialogTemplate: 'views/personal/vga.html'
         }, {
+            title: 'Battleship - Hundir la flota',
+            image: 'src/images/personal/battleship.jpg',
+            detail: '2016',
+            notes: 'Experimento con Angular 2.',
+            dialogTemplate: 'views/personal/battleship.html'
+        }, {
             title: 'Where is it?',
             image: 'src/images/personal/where-is-it.jpg',
             detail: '2016',
