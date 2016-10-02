@@ -107,6 +107,13 @@
 
         personal = [
         {
+            title: 'Píxel oculto',
+            image: 'src/images/personal/pixel-oculto.jpg',
+            detail: '2016 - Actualmente',
+            notes: 'Programa de podcast dirigido por mi donde se trataran diferentes temas del mundo del videojuego.',
+            dialogTemplate: 'views/personal/pixel-oculto.html'
+        },
+        {
             title: 'Colaborador VGA',
             image: 'src/images/personal/vga.jpg',
             detail: '2014 - Actualmente',
