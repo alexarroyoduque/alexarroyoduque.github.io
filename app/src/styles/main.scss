@@ -27,8 +27,14 @@ $pieColor6: #9E9E9E;
   font-style: normal;
 }
 
+html {
+  background-color: #F5F5F5;
+}
+
 body {
   font-family: 'Comfortaa', sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 md-toolbar {
@@ -237,6 +243,7 @@ md-dialog.custom-dialog md-content {
   height: 240px;
 }
 
+
 @media only screen and (min-width : 480px) and (max-width : 600px) {
   .master-head {
     height: 320px;
@@ -290,4 +297,11 @@ md-dialog.custom-dialog md-content {
   .project-image {
     height: 280px;
   }
+}
+
+@media only screen and (min-width : 1400px) {
+  .cv-button {
+    right: 18%;
+  }
+
 }

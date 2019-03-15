@@ -87,6 +87,11 @@
         }];
 
         educations = [{
+            image: 'src/images/education/psm1.png',
+            what: 'Profesional Scrum Master I',
+            where: 'scrum.org',
+            notes: '2018'
+        }, {
             image: 'src/images/education/gamificacion-intro-docentes.png',
             what: 'Introducción a la gamificación para docentes',
             href: 'https://goo.gl/rDzPXK',
@@ -107,11 +112,11 @@
 
         personal = [
         {
-            title: 'Píxel oculto',
-            image: 'src/images/personal/pixel-oculto.jpg',
+            title: 'Galaxia oculta',
+            image: 'src/images/personal/galaxia-oculta.jpg',
             detail: '2016 - Actualmente',
-            notes: 'Programa de podcast dirigido por mi donde se trataran diferentes temas del mundo del videojuego.',
-            dialogTemplate: 'views/personal/pixel-oculto.html'
+            notes: 'Canal de podcast. Programa principal sobre videojuegos #pixelOculto y #cantinaOculta para otros contenidos.',
+            dialogTemplate: 'views/personal/galaxia-oculta.html'
         },
         {
             title: 'Colaborador VGA',
