@@ -1,0 +1,13 @@
+md-dialog.custom-dialog
+  md-content
+    md-subheader.md-sticky-no-effect amiibum
+    p Mi primer experimento con lit-html y lit-element la evolución de Polymer.
+    p El sitio web sirve como álbum para marcar los amiibos de Nintendo coleccionados por el usuario. Permite filtrar por serie y/o personaje y almacena los datos localmente.
+    p Los datos son propocionados por una api creada por otro usuario. Sin embargo al estar servida con firebase que solo permite llamadas https y la api está en http, los datos son almacenados localmente en el proyecto.
+    | Esto que podría ser una desventaja sirve para mejorar la carga de datos ya que se descargan muchas imágenes que si no son reducidas pensan demasiado.
+    | No obstante los componentes para llamar a la api están implementados.
+
+  .md-actions(layout="row")
+    md-button.md-primary(href="https://amiibum.firebaseapp.com/", target="_blank") Sitio web
+    md-button.md-primary(href="https://github.com/alexarroyoduque/amiibum", target="_blank") Repositorio
+    md-button.md-primary(ng-click="hide()") Cerrar

@@ -112,11 +112,17 @@
 
         personal = [
         {
+            title: 'amiibum',
+            image: 'src/images/personal/amiibum.jpg',
+            detail: '2019',
+            notes: 'Marca tus amiibos de Nintendo en esta app hecha con lit-html.',
+            dialogTemplate: 'views/personal/amiibum.html'
+        }, {
             title: 'Galaxia oculta',
             image: 'src/images/personal/galaxia-oculta.jpg',
             detail: '2016 - Actualmente',
             notes: 'Canal de podcast. Programa principal sobre videojuegos #pixelOculto y #cantinaOculta para otros contenidos.',
-            dialogTemplate: 'views/personal/galaxia-oculta.html'
+            dialogTemplate: 'views/personal/galaxia.html'
         },
         {
             title: 'Colaborador VGA',
@@ -130,12 +136,6 @@
             detail: '2017',
             notes: 'Desarrollado junto a Samuel Dorado Rodríguez dentro de la iniciativa "Hacking the game" de s|ngular.',
             dialogTemplate: 'views/personal/project-black.html'
-        }, {
-            title: 'Invitado a Radio GameOn',
-            image: 'src/images/personal/game-on.png',
-            detail: '13/07/2016',
-            notes: 'Mi primera colaboración en radio.',
-            dialogTemplate: 'views/personal/game-on.html'
         }, {
             title: 'Battleship - Hundir la flota',
             image: 'src/images/personal/battleship.jpg',
@@ -190,15 +190,21 @@
             detail: '2013',
             notes: '¿Cuánto tardas en hacer 211 clicks sin pasarte? Mini juego hecho con AngularJS y NodeJS.',
             dialogTemplate: 'views/personal/click-master.html'
-        }, {
+        }];
+
+        secrets = [{
             title: 'Trainvial',
             image: 'src/images/personal/trainvial.jpg',
             detail: '2012',
             notes: 'Mi primer experimento con AngularJS. Demo de un trivial compatible con las plataformas móviles y escritorio.',
             dialogTemplate: 'views/personal/trainvial.html'
-        }];
-
-        secrets = [{
+        }, {
+            title: 'Invitado a Radio GameOn',
+            image: 'src/images/personal/game-on.png',
+            detail: '13/07/2016',
+            notes: 'Mi primera colaboración en radio.',
+            dialogTemplate: 'views/personal/game-on.html'
+        }, {
             title: 'Cromos de Egypt Adventure',
             image: 'src/images/personal/egypt-adventure-cards.jpg',
             detail: '2015',
