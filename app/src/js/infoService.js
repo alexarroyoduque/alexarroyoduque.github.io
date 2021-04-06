@@ -112,6 +112,13 @@
 
         personal = [
         {
+            title: 'Peteypedia',
+            image: 'src/images/personal/peteypedia.jpg',
+            detail: '2020',
+            notes: 'Réplica en español de la Peteypedia de Watchmen de la serie de HBO.',
+            dialogTemplate: 'views/personal/peteypedia.html'
+        },
+        {
             title: 'amiibum',
             image: 'src/images/personal/amiibum.jpg',
             detail: '2019',
@@ -122,7 +129,7 @@
             image: 'src/images/personal/galaxia-oculta.jpg',
             detail: '2016 - Actualmente',
             notes: 'Canal de podcast. Programa principal sobre videojuegos #pixelOculto y #cantinaOculta para otros contenidos.',
-            dialogTemplate: 'views/personal/galaxia.html'
+            dialogTemplate: 'views/personal/galaxia-oculta.html'
         },
         {
             title: 'Colaborador VGA',

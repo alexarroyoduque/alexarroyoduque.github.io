@@ -9,6 +9,8 @@ Bienvenido a mi portafolio hecho con AngularJS Material
 ```sh
 $ git clone https://github.com/alexarroyoduque/alexarroyoduque.github.io.git
 ```
+## Node
+4.1.*
 
 ## Instalar dependencias
 
