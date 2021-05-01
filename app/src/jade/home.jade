@@ -1,8 +1,9 @@
 .master-head.home.fade-in.fade1
   .info(layout="row", layout-align="center end")
     p ¡Gracias por tu visita! Este portafolio está hecho con AngularJS &amp; Material design
-md-content.fade-in.fade2
-  md-card
+md-content.fade-in.fade2(layout="row", layout-wrap)
+  md-card(layout-sm,
+    flex-gt-sm="49")
     md-card-content
       h2
         span.icon-beaker.title-option-icon
@@ -12,8 +13,8 @@ md-content.fade-in.fade2
       .info-card(layout="column" layout-align="center center")
         md-button.md-primary(ng-href="#/personal") Personales
         md-button.md-primary(ng-href="#/professional") Profesionales
-md-content.fade-in.fade3
-  md-card
+  md-card(layout-sm,
+    flex-gt-sm="49")
     md-card-content
       h2
         span.icon-search.title-option-icon

@@ -21,13 +21,17 @@
             what: 'JavaScript',
             image: 'src/images/skills/javascript.png'
         }, {
-            what: 'AngularJS',
-            image: 'src/images/skills/angular.jpg',
-            notes: 'HTML mejorado para aplicaciones web alucinantes'
+            what: 'Lit',
+            image: 'src/images/skills/lit.jpg',
+            notes: 'Librería para el desarrollo de web components.'
         }, {
             what: 'Polymer',
             image: 'src/images/skills/polymer.jpg',
             notes: 'Framework de desarrollo para crear web components.'
+        }, {
+            what: 'AngularJS',
+            image: 'src/images/skills/angular.jpg',
+            notes: 'HTML mejorado para aplicaciones web alucinantes'
         }, {
             what: 'PhaserJS',
             image: 'src/images/skills/phaser.jpg',
@@ -111,6 +115,13 @@
         }];
 
         personal = [
+        {
+            title: 'Orlog',
+            image: 'src/images/personal/orlog.jpg',
+            detail: '2021',
+            notes: 'Adaptación web del juego de dados Orlog de Assassins´s Creed Valhalla.',
+            dialogTemplate: 'views/personal/orlog.html'
+        },
         {
             title: 'Peteypedia',
             image: 'src/images/personal/peteypedia.jpg',
@@ -229,7 +240,7 @@
             title: 'BBVA - Cells Apps',
             company: 's|ngular, 2016',
             image: 'src/images/professional/bbva-cells.jpg',
-            notes: 'Cells es la nueva propuesta de BBVA para el desarrollo front. Soporte a las aplicaciones desarrolladas con Cells.',
+            notes: 'Cells es la propuesta de BBVA para el desarrollo front basada en webcomponents.',
             dialogTemplate: 'views/professional/bbva-cells-apps.html'
         }, {
             title: 'Bankia - Arquitectura componentes',
