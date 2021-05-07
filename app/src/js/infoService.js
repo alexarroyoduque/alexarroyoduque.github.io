@@ -155,12 +155,6 @@
             notes: 'Desarrollado junto a Samuel Dorado Rodríguez dentro de la iniciativa "Hacking the game" de s|ngular.',
             dialogTemplate: 'views/personal/project-black.html'
         }, {
-            title: 'Battleship - Hundir la flota',
-            image: 'src/images/personal/battleship.jpg',
-            detail: '2016',
-            notes: 'Experimento con Angular 2.',
-            dialogTemplate: 'views/personal/battleship.html'
-        }, {
             title: 'Where is it?',
             image: 'src/images/personal/where-is-it.jpg',
             detail: '2016',
@@ -216,6 +210,12 @@
             detail: '2012',
             notes: 'Mi primer experimento con AngularJS. Demo de un trivial compatible con las plataformas móviles y escritorio.',
             dialogTemplate: 'views/personal/trainvial.html'
+        }, {
+            title: 'Battleship - Hundir la flota',
+            image: 'src/images/personal/battleship.jpg',
+            detail: '2016',
+            notes: 'Experimento con Angular 2.',
+            dialogTemplate: 'views/personal/battleship.html'
         }, {
             title: 'Invitado a Radio GameOn',
             image: 'src/images/personal/game-on.png',
