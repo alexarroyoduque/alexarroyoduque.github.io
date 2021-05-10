@@ -6,7 +6,7 @@
         .controller('AppCtrl', ['$scope', 'infoService', '$mdSidenav', '$log', '$mdDialog', '$mdToast', '$location', PortfolioAppController])
         .config(function ($mdThemingProvider) {
             $mdThemingProvider.theme('default')
-                .primaryPalette('deep-purple')
+                .primaryPalette('indigo')
                 .accentPalette('amber');
             // $mdThemingProvider.theme('sub')
             //     .primaryPalette('cyan');
@@ -99,12 +99,12 @@
             text: 'Experiencia',
             icon: 'icon-docs',
             index: 3
-        }, {
+        }/*, {
             path: 'contact',
             text: 'Contacto',
             icon: 'icon-share',
             index: 4
-        }];
+        }*/];
 
         $scope.toolbarIcon = $scope.paths[0].icon;
 

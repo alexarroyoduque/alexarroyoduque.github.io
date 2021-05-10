@@ -4,11 +4,10 @@
 md-content.fade-in.fade2(layout="row", layout-wrap)
   div(ng-repeat="project in projects.personal",
     layout-sm,
-    flex-gt-sm="50",
-    flex-md="50",
+    flex-md="33",
     flex-gt-md="33",
-    flex-lg="33",
-    flex-gt-lg="25")
+    flex-lg="25",
+    flex-gt-lg="20")
     md-card
       img.project-image(ng-src="{{project.image}}", alt="{{project.title}}")
       md-card-content
@@ -17,4 +16,4 @@ md-content.fade-in.fade2(layout="row", layout-wrap)
         .info-card.project-card
           p {{project.notes}}
         .info-card(layout="row", layout-align="end end")
-          md-button.md-accent.md-raised(ng-click="showDialog($event, project.dialogTemplate)") Saber más
+          md-button.md-primary(ng-click="showDialog($event, project.dialogTemplate)") + INFO

@@ -5,7 +5,7 @@ md-content.fade-in.fade2
   md-card
     md-card-content
       .info-card
-        h2 s|ngular - Desarrollador Front
+        h2.company-name s|ngular
         small Mayo 2016 - Actualmente
         p
           img.photo(src="src/images/sngular.jpg", alt="sngular")
@@ -13,7 +13,7 @@ md-content.fade-in.fade2
 
     md-card-content
       .info-card
-        h2 GFT - Desarrollador Front
+        h2.company-name GFT
         small Enero 2016 - Mayo 2016
         p
           img.photo(src="src/images/gft.jpg", alt="gft")
@@ -22,7 +22,7 @@ md-content.fade-in.fade2
 
     md-card-content
       .info-card
-        h2 Adesis Netlife - Desarrollador Front
+        h2.company-name Adesis Netlife
         small Septiembre 2012 - Enero 2016
         p
           img.photo(src="src/images/adesis.jpg", alt="Adesis Netlife")
@@ -46,4 +46,5 @@ md-content.fade-in.fade3(layout="row", layout-wrap)
         .info-card.project-card
           p {{project.notes}}
         .info-card(layout="row", layout-align="end end")
-          md-button.md-accent.md-raised(ng-click="showDialog($event, project.dialogTemplate)") Saber más
+          md-button.md-primary(ng-click="showDialog($event, project.dialogTemplate)") + INFO
+        //-   md-button.md-accent.md-raised(ng-click="showDialog($event, project.dialogTemplate)") + INFO

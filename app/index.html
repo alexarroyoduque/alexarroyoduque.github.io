@@ -37,12 +37,12 @@
         <span class="visuallyhidden">Menú</span>
       </button>
 
-      <span class="music-controller">
+      <!-- <span class="music-controller">
         <md-button aria-label="Reproducir música" ng-click="isPlaying = !isPlaying;" alex-audio-control>
           <audio id="portfolioTheme" loop src="./src/audio/fez-beacon.mp3" aria-hidden="true"></audio>
           <span class="icon-note-beamed" ng-class="{'icon-note-beamed': !isPlaying, 'icon-pause-1': isPlaying}"></span>
         </md-button>
-      </span>
+      </span> -->
       <span class="wave fade-in fade1" ng-if="isPlaying">
         <div id="preloader_1">
           <span></span>
@@ -75,9 +75,9 @@
       </md-content>
     </md-sidenav>
     <md-content ng-cloak>
-      <md-button class="md-fab cv-button" aria-label="Curriculum Vitae" ng-click="openCV()">
+      <!-- <md-button class="md-fab cv-button" aria-label="Curriculum Vitae" ng-click="openCV()">
         <span class="icon-doc-text-inv"></span>
-      </md-button>
+      </md-button> -->
       <ng-view></ng-view>
     </md-content>
     <audio aria-hidden="true" id="secret" src="./src/audio/zelda.mp3"></audio>
