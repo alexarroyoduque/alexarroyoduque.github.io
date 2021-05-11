@@ -238,13 +238,13 @@
 
         professional = [{
             title: 'BBVA - Cells Apps',
-            company: 's|ngular, 2016',
+            company: 's|ngular, 2016 - actualidad',
             image: 'src/images/professional/bbva-cells.jpg',
             notes: 'Cells es la propuesta de BBVA para el desarrollo front basada en webcomponents.',
             dialogTemplate: 'views/professional/bbva-cells-apps.html'
         }, {
             title: 'Bankia - Arquitectura front',
-            company: 'Adesis Netlife, GFT 2013 - 2016',
+            company: 'Adesis Netlife/GFT 2013 - 2016',
             image: 'src/images/professional/bankia.jpg',
             notes: 'Sentar las bases de una arquitectura web moderna que permita crear aplicaciones agilmente',
             dialogTemplate: 'views/professional/bankia.html'

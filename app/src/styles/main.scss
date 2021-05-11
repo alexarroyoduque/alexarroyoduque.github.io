@@ -115,15 +115,15 @@ md-toolbar {
 .master-head {
     margin-top: -20px;
     height: 240px;
-    // background-color: #4DB6AC;
     color: white;
+    text-align: center;
     background-size: cover;
     background-color: $banner-color;
     &.home {
       background-image: url('src/images/banners/home.jpg');
     }
     &.about {
-      background-image: url('https://images.pexels.com/photos/289586/pexels-photo-289586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+      background-image: url('src/images/banners/about.jpg');
     }
     &.personal {
       background-image: url('src/images/banners/personal.jpg');
