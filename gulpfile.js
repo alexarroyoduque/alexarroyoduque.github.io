@@ -21,7 +21,7 @@ var path = {
     jade: './app/src/jade/{,*/}*.jade',
     audio: './app/src/audio/{,*/}*.mp3',
     fonts: './app/src/font/{,*/}*.{eot,svg,ttf,woff}',
-    images: './app/src/images/{,*,*/*}/*.{jpg,png,gif,ico}',
+    images: './app/src/images/{,*,*/*}/*.{jpg,jpeg,png,gif,ico}',
     html: './app/views/',
     dist: './dist'
 };
