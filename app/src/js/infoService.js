@@ -116,6 +116,13 @@
 
         personal = [
         {
+            title: 'Dart master',
+            image: 'src/images/personal/dart-master.jpg',
+            detail: '2022',
+            notes: 'Juego de dardos para GameBoy y navegador.',
+            dialogTemplate: 'views/personal/dart-master.html'
+        },
+        {
             title: 'Orlog',
             image: 'src/images/personal/orlog.jpg',
             detail: '2021',
