@@ -125,7 +125,7 @@ const secrets = [{
   title: 'Cromos de Egypt Adventure',
   img: 'src/images/personal/egypt-adventure-cards.jpg',
   subtitle: '2015',
-  description: 'Explora detalles de Egypt Adventure con los cromos promocionales realizados para la campaña de marketing.',
+  description: 'Cromos promocionales de Egypt Adventure con interesantes detalles.',
   modalTemplate: 'src/modals/personal/egypt-adventure-cards.html'
 }, {
   title: 'Portafolio',
