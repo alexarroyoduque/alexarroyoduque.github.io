@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import { projects } from './database/personal.js';
+import { projects, secrets } from './database/personal.js';
 import './po-card-img.js';
 
 export class PoPagePersonal extends LitElement {
@@ -9,6 +9,11 @@ export class PoPagePersonal extends LitElement {
 
   constructor() {
     super();
+
+    window.addEventListener('global-secrets-active-changed', (event) => {
+      this.requestUpdate();
+    });
+
   }
 
   static get styles() {
@@ -26,14 +31,13 @@ export class PoPagePersonal extends LitElement {
         flex-wrap: wrap; /* Allows cards to wrap to the next line */
         justify-content: center; /* Centers the cards horizontally */
         gap: .8rem .2rem; /* Adds space between the cards */
+        margin-bottom: .8rem;
       }
 
-      /* Optionally, add responsiveness */
-      @media (max-width: 600px) {
-        .projects {
-          gap: 10px; /* Adjust gap for smaller screens */
-        }
+      [hidden] {
+        display: none;
       }
+
     `;
   }
 
@@ -52,6 +56,19 @@ export class PoPagePersonal extends LitElement {
             </po-card-img>
           `)}
         </section>
+
+        <section class="projects" ?hidden=${!window.GLOBAL_SECRETS_ACTIVE}>
+          ${secrets.map(project => html`
+            <po-card-img
+              title="${project.title}"
+              subtitle="${project.subtitle}"
+              img="${project.img}"
+              description="${project.description}"
+              modalTemplate="${project.modalTemplate}">
+            </po-card-img>
+          `)}
+        </section>
+
       </section>
     `;
   }

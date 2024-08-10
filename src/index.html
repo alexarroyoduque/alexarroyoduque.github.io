@@ -2,19 +2,26 @@
 
 <html lang="es">
 <head>
-  <!-- Register service worker if supported. -->
-  <!--
+
+  <script src="./src/konami.js"></script>
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js');
+    window.GLOBAL_SECRETS_ACTIVE = false;
+
+    // Función para actualizar la variable global y emitir un evento
+    // El evento se escucha en po-page-personal para actualizar los proyectos secretos
+    function updateGlobalSecretsActive(value) {
+      window.GLOBAL_SECRETS_ACTIVE = value;
+      const event = new CustomEvent('global-secrets-active-changed', { detail: value });
+      window.dispatchEvent(event);
     }
+
+    const easterEgg = new Konami(() => {
+      if (!window._GLOBAL_SECRETS_ACTIVE) console.log('Nuevos proyectos personales desbloqueados. Visita la sección para verlos.');
+      updateGlobalSecretsActive(true);
+  });
   </script>
-  -->
   <!-- Load polyfills --> 
-  <script 
-    src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
-    defer>
-  </script> 
+  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer></script> 
 
   <!-- Load components via WebComponents.waitFor -->
   <script type="module">

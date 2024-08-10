@@ -14,8 +14,6 @@
     "src/po-main.js"
   ],
   "extraDependencies": [
-    "bower_components/webcomponentsjs/*.js",
-    "robots.txt",
     "node_modules/@webcomponents/webcomponentsjs/**"
   ],
   "builds": [

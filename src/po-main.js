@@ -9,16 +9,35 @@ import './po-page-personal.js';
 export class PoMain extends LitElement {
   static get properties() {
     return {
-      currentPage: { type: String },
-      payload: { type: Object }
+      currentPage: { type: String }
     };
   }
 
   constructor() {
     super();
     this.currentPage = 'home';
-    this.payload = {};
-    
+
+    const devMessage =
+    '\n' +
+    'Un nuevo desafío ante ti...\n' +
+    '────────────────▄────────────────\n' +
+    '──────────────▄▀░▀▄──────────────\n' +
+    '────────────▄▀░░░░░▀▄────────────\n' +
+    '──────────▄▀░░░░░░░░░▀▄──────────\n' +
+    '────────▄█▄▄▄▄▄▄▄▄▄▄▄▄▄█▄────────\n' +
+    '───────▄▀▄─────────────▄▀▄───────\n' +
+    '─────▄▀░░░▀▄─────────▄▀░░░▀▄─────\n' +
+    '───▄▀░░░░░░░▀▄─────▄▀░░░░░░░▀▄───\n' +
+    '─▄▀░░░░░░░░░░░▀▄─▄▀░░░░░░░░░░░▀▄─\n' +
+    '▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n' +
+    '\n' +
+    'Haz foco en cualquier parte del portafolio\n' +
+    'e introduce el código Konami: \n' +
+    '"▲, ▲, ▼, ▼, ◀, ▶, ◀, ▶, B, A".\n' +
+    'Si usas un dispositivo táctil prueba con: \n' +
+    '"▲, ▲, ▼, ▼, ◀, ▶, ◀, ▶, tap, tap".\n';
+
+    console.log(devMessage);
   }
 
   static get styles() {
@@ -50,7 +69,6 @@ export class PoMain extends LitElement {
 
   _navigate(page) {
     this.currentPage = page;
-    console.log('_navigate', page)
   }   
 
   render() {

@@ -10,7 +10,7 @@
     "copy-default": "cp -r build/default ./",
     "copy-index": "cp default/src/index.html ./",
     "update-references": "node scripts/update-references.js",
-    "deploy": "rm -rf index.html && rm -rf default && npm run prepare-deploy"
+    "deploy": "rm -rf index.html && rm -rf build && rm -rf default && npm run prepare-deploy"
   },
   "author": "AlexArroyoDuque",
   "license": "licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional",

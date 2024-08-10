@@ -103,6 +103,39 @@ const projects = [
   }
 ];
 
+const secrets = [{
+  title: 'Trainvial',
+  img: 'src/images/personal/trainvial.jpg',
+  subtitle: '2012',
+  description: 'Mi primer experimento con AngularJS. Demo de un trivial compatible con las plataformas móviles y escritorio.',
+  modalTemplate: 'src/modals/personal/trainvial.html'
+}, {
+  title: 'Battleship - Hundir la flota',
+  img: 'src/images/personal/battleship.jpg',
+  subtitle: '2016',
+  description: 'Experimento con Angular 2.',
+  modalTemplate: 'src/modals/personal/battleship.html'
+}, {
+  title: 'Invitado a Radio GameOn',
+  img: 'src/images/personal/game-on.png',
+  subtitle: '13/07/2016',
+  description: 'Mi primera colaboración en radio.',
+  modalTemplate: 'src/modals/personal/game-on.html'
+}, {
+  title: 'Cromos de Egypt Adventure',
+  img: 'src/images/personal/egypt-adventure-cards.jpg',
+  subtitle: '2015',
+  description: 'Explora detalles de Egypt Adventure con los cromos promocionales realizados para la campaña de marketing.',
+  modalTemplate: 'src/modals/personal/egypt-adventure-cards.html'
+}, {
+  title: 'Portafolio',
+  img: 'src/images/personal/portfolio.jpg',
+  subtitle: '2015',
+  description: 'Descubre las tecnologías y motivaciones que han llevado a cabo este proyecto.',
+  modalTemplate: 'src/modals/personal/portfolio.html'
+}];
+
 export {
-  projects
+  projects,
+  secrets
 };

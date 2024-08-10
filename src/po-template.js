@@ -65,7 +65,6 @@ export class PoTemplate extends LitElement {
   }
 
   _handleClick(pageName) {
-    console.log('_handleClick', pageName);
     this.dispatchEvent(new CustomEvent('navigate', { detail: { page: pageName }, bubbles: true, composed: true }));
   }
 
