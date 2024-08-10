@@ -1,29 +1,37 @@
 # Portafolio
 
-Bienvenido a mi portafolio hecho con AngularJS Material
+Bienvenido a mi portafolio hecho con Lit.
 [http://alexarroyoduque.github.io](http://alexarroyoduque.github.io)
 
+## Node
+18.17.1
 
-## Clonar
+## Quick start
 
 ```sh
 $ git clone https://github.com/alexarroyoduque/alexarroyoduque.github.io.git
-```
-## Node
-4.1.*
-
-## Instalar dependencias
-
-```sh
+$ cd alexarroyoduque.github.io
 $ npm install
+$ npm install -g polymer-cli
+$ polymer serve
+
 ```
 
+## Build
+
 ```sh
-$ bower install
+$ polymer build
+$ polymer serve build/default
+$ npm run deploy
 ```
 
-## Ejecutar
+## Deploy
+
+Prepara el proyecto para github.io:
+ - Construye el proyecto
+ - Traslada al raiz el index.html construído
+ - Actualiza dependencias del index.html para acceder a los recursos de la build
 
 ```sh
-$ gulp
+$ npm run deploy
 ```

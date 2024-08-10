@@ -1,11 +1,9 @@
 logs/*
 !.gitkeep
 node_modules/
-app/bower_components/
-app/main.css
-app/views/
 .tmp/
 tmp/
 dist/
 .DS_Store
 .idea
+build/

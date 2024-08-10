@@ -1,0 +1,37 @@
+{
+  "entrypoint": "src/index.html",
+  "shell": "src/po-main.js",
+  "fragments": [
+    "src/po-main.js"
+  ],
+  "sources": [
+    "src/**/*",
+    "manifest/**",
+    "manifest.json",
+    "package.json",
+    "src/index.html",
+    "src/po-main.js",
+    "src/po-main.js"
+  ],
+  "extraDependencies": [
+    "bower_components/webcomponentsjs/*.js",
+    "robots.txt",
+    "node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "builds": [
+    {
+      "bundle": true,
+      "js": {
+        "minify": true,
+        "compile": "es2015",
+        "module": true
+      },
+      "addServiceWorker": false,
+      "addPushManifest": true,
+      "name": "default"
+    }
+  ],
+  "npm": true,
+  "componentDir": "node_modules/",
+  "moduleResolution": "node"
+}

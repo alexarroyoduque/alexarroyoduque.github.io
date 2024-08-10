@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <!-- Register service worker if supported. -->
+  <!--
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
+  -->
+  <!-- Load polyfills --> 
+  <script 
+    src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+    defer>
+  </script> 
+
+  <!-- Load components via WebComponents.waitFor -->
+  <script type="module">
+    window.WebComponents = window.WebComponents || { 
+      waitFor(cb){ addEventListener('WebComponentsReady', cb) }
+    } 
+    WebComponents.waitFor(async () => { 
+      import('./src/po-main.js');
+    });
+  </script>
+  
+  <meta name="description" content="Portafolio de Alejandro Arroyo Duque">
+  <meta name="keywords" content="portafolio, alejandro, arroyo, duque, portfolio"/>
+  <meta name="theme-color" content="#000">
+  <title>Portafolio</title>
+
+  <meta property="og:title" content="Portafolio de Alejandro Arroyo Duque"/>
+  <meta property="og:description" content="Portafolio de Alejandro Arroyo Duque"/>
+  <meta property="og:keywords" content="portafolio, alejandro, arroyo, duque, portfolio"/>
+  <meta property="og:image" content="/manifest/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="shortcut icon" href="/manifest/favicon.ico" type="image/x-icon">
+  <link href="/manifest/icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="src/fonts/fontello.css">
+
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #b9b9b9;
+    display: block;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    padding-top: 0rem;
+  }
+
+  po-main {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+</style>
+<body>
+
+
+  <div class="wrapper">
+    <po-main>
+      <!-- Placeholders to improve time to first paint -->
+      <h1>Cargando...!</h1>
+  
+      <!-- Check for JavaScript -->
+      <p id="jsyes"></p>
+      <script type="text/javascript">
+        document.getElementById('jsyes').innerHTML='Cargando...';
+      </script>
+      <noscript>
+        Could not render the custom element. Check that JavaScript is enabled.
+      </noscript>
+    </po-main>
+  </div>
+</body>
+
+</html>
