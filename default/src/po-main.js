@@ -662,11 +662,8 @@ function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.g
       :host {
         display: block;
         --theme-primary-font-family:  'Nunito', sans-serif;
-        --theme-secondary-font-family: 'Titillium Web', sans-serif;
+        /* --theme-secondary-font-family: 'Titillium Web', sans-serif; */
         --theme-mono-font-family: 'Noto Sans Mono', monospac;
-
-        --theme-background-main: url(https://img.freepik.com/premium-photo/soft-neon-blue-gradient-abstract-background-design_973208-58.jpg);
-        --theme-background-world: url(https://img.freepik.com/free-vector/abstract-background-with-northern-lights_23-2148191036.jpg);
 
         --theme-color-green: #00ff4c;
         --theme-color-blue: #5be7ff;
