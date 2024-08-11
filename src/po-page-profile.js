@@ -30,7 +30,7 @@ export class PoPageProfile extends LitElement {
   render() {
     return html`
       <section>
-        <po-container-items .items=${[
+        <po-container-items mode="full" .items=${[
           {
             title: 'Alejandro Arroyo Duque',
             img: 'src/images/alex.jpg',

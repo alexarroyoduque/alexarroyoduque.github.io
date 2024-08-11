@@ -68,7 +68,7 @@ function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.g
       .card-subtitle {
         font-size: .95rem;
         color: #555;
-        margin-bottom: 10px;
+        margin-bottom: .2rem;
       }
   
       .card-description {
@@ -357,6 +357,15 @@ function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.g
         padding: .5rem;
       }
 
+      :host([mode='full']) .item {
+        border-bottom: 1px solid #eee;
+      }
+
+      /* Elimina la línea en el último ítem */
+      .item:last-child {
+        border-bottom: none;
+      }
+
       .item-header {
         display: flex;
         align-items: flex-start;
@@ -380,7 +389,6 @@ function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.g
         font-size: 1.5em;
         font-weight: bold;
         color: #333;
-        margin-bottom: 5px;
       }
 
       .item-subtitle {
@@ -440,6 +448,10 @@ function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.g
         font-size: 0.9em;
       }
 
+      .responsive-small {
+        display: none;
+      }
+
       /* Responsividad para 2 y 1 columna(s) */
       @media (max-width: 900px) {
         :host([mode='mini']) .items-list {
@@ -450,6 +462,18 @@ function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.g
       @media (max-width: 600px) {
         :host([mode='mini']) .items-list {
           grid-template-columns: 1fr; /* 1 columna */
+        }
+
+        :host([mode='full']) .responsive-large {
+          display: none;
+        }
+
+        :host([mode='full']) .responsive-small {
+          display: block;
+        }
+        
+        :host([mode='mini']) .responsive-small {
+          display: none;
         }
       }
     `}render(){return x`
@@ -463,9 +487,10 @@ function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.g
                   <div class="item-content">
                     <div class="item-title">${item.title}</div>
                     <div class="item-subtitle" ?hidden=${!item.subtitle}>${item.subtitle}</div>
-                    <div class="item-description">${item.description}</div>
+                    <div class="item-description responsive-large">${item.description}</div>
                   </div>
                 </div>
+                <div class="item-description responsive-small">${item.description}</div>
               </div>
             `)}
         </div>
@@ -576,7 +601,7 @@ this.currentPage="";// Inicializar la página actual como cadena vacía por defe
       }
     `}render(){return x`
       <section>
-        <po-container-items .items=${[{title:"Alejandro Arroyo Duque",img:"src/images/alex.jpg",subtitle:"Front-end developer",description:"Apasionado en explotar el potencial de la web. En mi tiempo libre creo proyectos experimentales de videojuegos y lanc\xE9 el podcast #PixelOculto para hablar de ellos. Adem\xE1s continuamente busco aprender sobre otras \xE1reas como UX, agilismo, etc."}]}></po-container-items>
+        <po-container-items mode="full" .items=${[{title:"Alejandro Arroyo Duque",img:"src/images/alex.jpg",subtitle:"Front-end developer",description:"Apasionado en explotar el potencial de la web. En mi tiempo libre creo proyectos experimentales de videojuegos y lanc\xE9 el podcast #PixelOculto para hablar de ellos. Adem\xE1s continuamente busco aprender sobre otras \xE1reas como UX, agilismo, etc."}]}></po-container-items>
 
         <po-container-items title="Formación" mode="mini" .items=${education}></po-container-items>
         <po-container-items title="Habilidades" mode="mini" .items=${skills}></po-container-items>
@@ -607,7 +632,7 @@ this.currentPage="";// Inicializar la página actual como cadena vacía por defe
       }
     `}render(){return x`
       <section>
-        <po-container-items .items=${companies}></po-container-items>
+        <po-container-items mode="full" .items=${companies}></po-container-items>
 
         <section class="projects">
           ${projects$1.map(project=>x`

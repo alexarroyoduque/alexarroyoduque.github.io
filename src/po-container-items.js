@@ -49,6 +49,15 @@ export class PoContainerItems extends LitElement {
         padding: .5rem;
       }
 
+      :host([mode='full']) .item {
+        border-bottom: 1px solid #eee;
+      }
+
+      /* Elimina la línea en el último ítem */
+      .item:last-child {
+        border-bottom: none;
+      }
+
       .item-header {
         display: flex;
         align-items: flex-start;
@@ -72,7 +81,6 @@ export class PoContainerItems extends LitElement {
         font-size: 1.5em;
         font-weight: bold;
         color: #333;
-        margin-bottom: 5px;
       }
 
       .item-subtitle {
@@ -132,6 +140,10 @@ export class PoContainerItems extends LitElement {
         font-size: 0.9em;
       }
 
+      .responsive-small {
+        display: none;
+      }
+
       /* Responsividad para 2 y 1 columna(s) */
       @media (max-width: 900px) {
         :host([mode='mini']) .items-list {
@@ -142,6 +154,18 @@ export class PoContainerItems extends LitElement {
       @media (max-width: 600px) {
         :host([mode='mini']) .items-list {
           grid-template-columns: 1fr; /* 1 columna */
+        }
+
+        :host([mode='full']) .responsive-large {
+          display: none;
+        }
+
+        :host([mode='full']) .responsive-small {
+          display: block;
+        }
+        
+        :host([mode='mini']) .responsive-small {
+          display: none;
         }
       }
     `;
@@ -160,9 +184,10 @@ export class PoContainerItems extends LitElement {
                   <div class="item-content">
                     <div class="item-title">${item.title}</div>
                     <div class="item-subtitle" ?hidden=${!item.subtitle}>${item.subtitle}</div>
-                    <div class="item-description">${item.description}</div>
+                    <div class="item-description responsive-large">${item.description}</div>
                   </div>
                 </div>
+                <div class="item-description responsive-small">${item.description}</div>
               </div>
             `
           )}

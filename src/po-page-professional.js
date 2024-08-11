@@ -42,7 +42,7 @@ export class PoPageProfessional extends LitElement {
   render() {
     return html`
       <section>
-        <po-container-items .items=${companies}></po-container-items>
+        <po-container-items mode="full" .items=${companies}></po-container-items>
 
         <section class="projects">
           ${projects.map(project => html`

@@ -59,7 +59,7 @@ export class PoCardImg extends LitElement {
       .card-subtitle {
         font-size: .95rem;
         color: #555;
-        margin-bottom: 10px;
+        margin-bottom: .2rem;
       }
   
       .card-description {
