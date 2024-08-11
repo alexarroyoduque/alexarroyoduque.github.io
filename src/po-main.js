@@ -71,7 +71,16 @@ export class PoMain extends LitElement {
   render() {
     return html`
       <section>
-        <po-template @navigate="${(e) => this._navigate(e.detail.page)}">
+        <po-template
+          @navigate="${(e) => this._navigate(e.detail.page)}"
+          .headerItems=${[
+            { text: 'Inicio', id: 'home' },
+            { text: 'Perfil', id: 'profile' },
+            { text: 'Experiencia', id: 'professional' },
+            { text: 'Proyectos Personales', id: 'personal' }
+          ]}
+          currentPage=${this.currentPage}
+          >
           ${this.currentPage === 'home' ? html`<po-page-home></po-page-home>` : ''}
           ${this.currentPage === 'professional' ? html`<po-page-professional></po-page-professional>` : ''}
           ${this.currentPage === 'personal' ? html`<po-page-personal></po-page-personal>` : ''}

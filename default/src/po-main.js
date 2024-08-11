@@ -470,60 +470,72 @@ function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.g
             `)}
         </div>
       </div>
-    `}}customElements.define("po-container-items",PoContainerItems);var poContainerItems={PoContainerItems:PoContainerItems};class PoTemplate extends s$3{static get properties(){return{}}constructor(){super()}static get styles(){return i`
-    :host {
-      display: block;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      box-sizing: border-box;
-    }
+    `}}customElements.define("po-container-items",PoContainerItems);var poContainerItems={PoContainerItems:PoContainerItems};class PoTemplate extends s$3{static get properties(){return{headerItems:{type:Array},// Array que define los elementos del encabezado
+currentPage:{type:String// Página actual para resaltar el botón seleccionado
+}}}constructor(){super();this.headerItems=[];// Inicializar el array como vacío por defecto
+this.currentPage="";// Inicializar la página actual como cadena vacía por defecto
+}static get styles(){return i`
+      :host {
+        display: block;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #333;
+        box-sizing: border-box;
+      }
 
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      padding: 10px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 1000;
-    }
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
 
-    button {
-      display: inline-block;
-      padding: 10px 20px;
-      text-align: center;
-      cursor: pointer;
-      text-decoration: none;
-      font-family: var(--theme-mono-font-family);
-      background-color: #fff;
-      color: black;
-      /* border: 1px solid black; */
-      border: 0;
-      text-transform: uppercase;
-    }
+      button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        font-family: var(--theme-mono-font-family);
+        background-color: #fff;
+        color: black;
+        border: 0;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+      }
 
+      .selected {
+        background-color: #333;
+        color: #fff;
+      }
 
-    .main {
-      margin-top: 60px; /* To prevent content from being hidden under the header */
-      padding: 20px;
-    }
-    @media (max-width: 520px) {
+      .main {
+        margin-top: 60px; /* To prevent content from being hidden under the header */
+        padding: 20px;
+      }
+
+      @media (max-width: 520px) {
         button {
           padding: 5px;
         }
       }
-  `}_handleClick(pageName){this.dispatchEvent(new CustomEvent("navigate",{detail:{page:pageName},bubbles:!0,composed:!0}))}render(){return x`
+    `}_handleClick(pageName){this.dispatchEvent(new CustomEvent("navigate",{detail:{page:pageName},bubbles:!0,composed:!0}))}render(){return x`
       <header class="header">
-        <button @click=${()=>this._handleClick("home")}>Inicio</button>
-        <button @click=${()=>this._handleClick("profile")}>Perfil</button>
-        <button @click=${()=>this._handleClick("professional")}>Experiencia</button>
-        <button @click=${()=>this._handleClick("personal")}>Proyectos Personales</button>
+        ${this.headerItems.map(item=>x`
+            <button 
+              @click=${()=>this._handleClick(item.id)}
+              class="${this.currentPage===item.id?"selected":""}">
+              ${item.text}
+            </button>
+          `)}
       </header>
       <main class="main">
         <slot></slot>
@@ -680,7 +692,11 @@ function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.g
       }
     `}_navigate(page){this.currentPage=page}render(){return x`
       <section>
-        <po-template @navigate="${e=>this._navigate(e.detail.page)}">
+        <po-template
+          @navigate="${e=>this._navigate(e.detail.page)}"
+          .headerItems=${[{text:"Inicio",id:"home"},{text:"Perfil",id:"profile"},{text:"Experiencia",id:"professional"},{text:"Proyectos Personales",id:"personal"}]}
+          currentPage=${this.currentPage}
+          >
           ${"home"===this.currentPage?x`<po-page-home></po-page-home>`:""}
           ${"professional"===this.currentPage?x`<po-page-professional></po-page-professional>`:""}
           ${"personal"===this.currentPage?x`<po-page-personal></po-page-personal>`:""}

@@ -35,3 +35,15 @@ Prepara el proyecto para github.io:
 ```sh
 $ npm run deploy
 ```
+
+# Credits
+
+> By AlexArroyoDuque
+
+> [https://fonts.google.com/](https://fonts.google.com/)
+
+> [https://fontello.com/](https://fontello.com/)
+
+> [https://konamijs.mand.is](https://konamijs.mand.is)
+
+> [https://chatgpt.com](https://chatgpt.com)
