@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
-import { education, skills } from './database/profile.js';
-import './po-card-img.js';
+import { education, skills } from '../database/profile.js';
+import '../components/po-card-img.js';
 
 export class PoPageProfile extends LitElement {
   static get properties() {

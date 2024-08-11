@@ -1,9 +1,9 @@
 import { LitElement, html, css } from 'lit-element';
-import './po-template.js';
-import './po-page-home.js';
-import './po-page-profile.js';
-import './po-page-professional.js';
-import './po-page-personal.js';
+import './components/po-template.js';
+import './pages/po-page-home.js';
+import './pages/po-page-profile.js';
+import './pages/po-page-professional.js';
+import './pages/po-page-personal.js';
 
 
 export class PoMain extends LitElement {

@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
-import './po-card-jumbo.js';
-import './po-card-img.js';
-import './po-container-items.js';
+import '../components/po-card-jumbo.js';
+import '../components/po-card-img.js';
+import '../components/po-container-items.js';
 
 export class PoPageHome extends LitElement {
   static get properties() {
