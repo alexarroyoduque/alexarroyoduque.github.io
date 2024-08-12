@@ -6,7 +6,8 @@
   "main": "po-main.js",
   "scripts": {
     "build": "polymer build",
-    "prepare-deploy": "npm run build && npm run copy-default && npm run copy-index && npm run update-references",
+    "optimize-images": "npx gulp",
+    "prepare-deploy": "npm run build && npm run optimize-images && npm run copy-default && npm run copy-index && npm run update-references",
     "copy-default": "cp -r build/default ./",
     "copy-index": "cp default/src/index.html ./",
     "update-references": "node scripts/update-references.js",
@@ -19,6 +20,8 @@
     "lit": "^2.0.0"
   },
   "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-imagemin": "^9.0.0",
     "polymer-cli": "1.9.11"
   }
 }

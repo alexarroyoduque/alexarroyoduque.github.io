@@ -42,6 +42,8 @@ $ npm run deploy
 
 > [https://fonts.google.com/](https://fonts.google.com/)
 
+> [https://www.npmjs.com/package/gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin) & Gulp 4
+
 > [https://fontello.com/](https://fontello.com/)
 
 > [https://konamijs.mand.is](https://konamijs.mand.is)
