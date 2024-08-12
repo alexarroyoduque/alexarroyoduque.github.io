@@ -29,6 +29,7 @@ $ npm run deploy
 
 Prepara el proyecto para github.io:
  - Construye el proyecto
+ - Reduce el tamaño de las imágenes
  - Traslada al raiz el index.html construído
  - Actualiza dependencias del index.html para acceder a los recursos de la build
 
