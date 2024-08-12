@@ -53,8 +53,7 @@ export class PoContainerItems extends LitElement {
         border-bottom: 1px solid #eee;
       }
 
-      /* Elimina la línea en el último ítem */
-      .item:last-child {
+      :host([mode='full']) .item:last-child {
         border-bottom: none;
       }
 
