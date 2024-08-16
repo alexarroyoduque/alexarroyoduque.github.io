@@ -6,30 +6,27 @@ Bienvenido a mi portafolio hecho con Lit.
 ## Node
 18.17.1
 
-## Quick start
+## Quick start (web-dev-server)
 
 ```sh
 $ git clone https://github.com/alexarroyoduque/alexarroyoduque.github.io.git
 $ cd alexarroyoduque.github.io
 $ npm install
-$ npm install -g polymer-cli
-$ polymer serve
-
+$ npm run serve
 ```
 
-## Build
+## Build (esbuild)
 
 ```sh
-$ polymer build
-$ polymer serve build/default
-$ npm run deploy
+$ npm run build
 ```
 
 ## Deploy
 
 Prepara el proyecto para github.io:
  - Construye el proyecto
- - Reduce el tamaño de las imágenes
+ - Copia webcomponentsjs a la build
+ - Reduce el tamaño de las imágenes (gulp-imagemin)
  - Traslada al raiz el index.html construído
  - Actualiza dependencias del index.html para acceder a los recursos de la build
 
@@ -40,6 +37,10 @@ $ npm run deploy
 # Credits
 
 > By AlexArroyoDuque
+
+> [https://modern-web.dev/docs/test-runner/overview/](https://modern-web.dev/docs/test-runner/overview/)
+
+> [https://esbuild.github.io/](https://esbuild.github.io/)
 
 > [https://fonts.google.com/](https://fonts.google.com/)
 

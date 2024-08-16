@@ -1,17 +1,14 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, css } from 'lit';
 import './components/po-template.js';
 import './pages/po-page-home.js';
 import './pages/po-page-profile.js';
 import './pages/po-page-professional.js';
 import './pages/po-page-personal.js';
 
-
-export class PoMain extends LitElement {
-  static get properties() {
-    return {
+class PoMain extends LitElement {
+  static properties = {
       currentPage: { type: String }
     };
-  }
 
   constructor() {
     super();
@@ -40,13 +37,11 @@ export class PoMain extends LitElement {
     console.log(devMessage);
   }
 
-  static get styles() {
-    return css`
+  static styles = css`
       :host {
         display: block;
-        --theme-primary-font-family:  'Nunito', sans-serif;
-        /* --theme-secondary-font-family: 'Titillium Web', sans-serif; */
-        --theme-mono-font-family: 'Noto Sans Mono', monospac;
+        --theme-primary-font-family: 'Nunito', sans-serif;
+        --theme-mono-font-family: 'Noto Sans Mono', monospace;
 
         --theme-color-green: #00ff4c;
         --theme-color-blue: #5be7ff;
@@ -58,11 +53,8 @@ export class PoMain extends LitElement {
         --theme-color-secondary: var(--theme-color-light);
 
         margin: 0px auto;
-
-        /* background-color: red; */
       }
     `;
-  }
 
   _navigate(page) {
     this.currentPage = page;
@@ -80,18 +72,15 @@ export class PoMain extends LitElement {
             { text: 'Proyectos Personales', id: 'personal' }
           ]}
           currentPage=${this.currentPage}
-          >
+        >
           ${this.currentPage === 'home' ? html`<po-page-home></po-page-home>` : ''}
           ${this.currentPage === 'professional' ? html`<po-page-professional></po-page-professional>` : ''}
           ${this.currentPage === 'personal' ? html`<po-page-personal></po-page-personal>` : ''}
           ${this.currentPage === 'profile' ? html`<po-page-profile></po-page-profile>` : ''}
         </po-template>
       </section>
-
     `;
   }
-
-
 }
 
 customElements.define('po-main', PoMain);

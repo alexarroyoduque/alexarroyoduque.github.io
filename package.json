@@ -5,23 +5,24 @@
   "repository": "https://github.com/alexarroyoduque/alexarroyoduque.github.io",
   "main": "po-main.js",
   "scripts": {
-    "build": "polymer build",
+    "serve": "npx web-dev-server --config web-dev-server.config.js",
+    "build": "node esbuild.config.js",
     "optimize-images": "npx gulp",
-    "prepare-deploy": "npm run build && npm run optimize-images && npm run copy-default && npm run copy-index && npm run update-references",
-    "copy-default": "cp -r build/default ./",
-    "copy-index": "cp default/src/index.html ./",
-    "update-references": "node scripts/update-references.js",
-    "deploy": "rm -rf index.html && rm -rf build && rm -rf default && npm run prepare-deploy"
+    "prepare-deploy": "npm run build && npm run optimize-images",
+    "clean": "rm -rf index.html && rm -rf build",
+    "deploy": "npm run clean && npm run prepare-deploy"
   },
   "author": "AlexArroyoDuque",
   "license": "licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional",
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.0.0",
-    "lit": "^2.0.0"
+    "lit": "^3.0.0"
   },
   "devDependencies": {
+    "@web/dev-server": "^0.4.6",
+    "esbuild": "^0.23.0",
+    "fs-extra": "^11.2.0",
     "gulp": "^4.0.0",
-    "gulp-imagemin": "^9.0.0",
-    "polymer-cli": "1.9.11"
+    "gulp-imagemin": "^9.0.0"
   }
 }

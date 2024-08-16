@@ -2,13 +2,9 @@ logs/*
 !.gitkeep
 # Ignora node_modules en la raíz
 /node_modules
-
-# No ignores node_modules dentro de la carpeta default
-!default/node_modules
-
+!dist/node_modules
 .tmp/
 tmp/
-dist/
 .DS_Store
 .idea
 build/

@@ -1,12 +1,11 @@
-import { html, css, LitElement } from 'lit-element';
+import { html, css, LitElement } from 'lit';
 
-export class PoTemplate extends LitElement {
-  static get properties() {
-    return {
-      headerItems: { type: Array }, // Array que define los elementos del encabezado
-      currentPage: { type: String } // Página actual para resaltar el botón seleccionado
-    };
-  }
+class PoTemplate extends LitElement {
+  static properties = {
+    headerItems: { type: Array }, // Array que define los elementos del encabezado
+    currentPage: { type: String }  // Página actual para resaltar el botón seleccionado
+  };
+
 
   constructor() {
     super();
@@ -14,8 +13,7 @@ export class PoTemplate extends LitElement {
     this.currentPage = ''; // Inicializar la página actual como cadena vacía por defecto
   }
 
-  static get styles() {
-    return css`
+  static styles = css`
       :host {
         display: block;
         margin: 0;
@@ -59,7 +57,7 @@ export class PoTemplate extends LitElement {
       }
 
       .main {
-        margin-top: 60px; /* To prevent content from being hidden under the header */
+        margin-top: 60px; /* Para evitar que el contenido quede oculto bajo el encabezado */
         padding: 20px;
       }
 
@@ -69,7 +67,6 @@ export class PoTemplate extends LitElement {
         }
       }
     `;
-  }
 
   _handleClick(pageName) {
     this.dispatchEvent(new CustomEvent('navigate', { detail: { page: pageName }, bubbles: true, composed: true }));
