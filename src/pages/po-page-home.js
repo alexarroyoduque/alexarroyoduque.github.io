@@ -33,9 +33,9 @@ export class PoPageHome extends LitElement {
       <section>
         <po-card-jumbo
           img="./images/alex.jpg"
-          title="Welcome"
+          title="Aquí no hay proyectos, hay pasión pura"
           navigation="profile"
-          description="Descubre mis proyectos y la pasión que pongo en cada uno de ellos. ¡Explora y encuentra inspiración en mi portafolio!"
+          description="Cada uno de estos trabajos es un pedazo de mi alma puesto sobre la mesa. No te quedes solo en mirar, explora, sumérgete y deja que cada idea te inspire. ¡Adelante!"
           .socialLinks="${[
             { icon: 'x-twitter', user: 'AlexArroyoDuque', href: 'https://twitter.com/alexarroyoduque' },
             { icon: 'github', user: 'AlexArroyoDuque', href: 'https://github.com/alexarroyoduque' },

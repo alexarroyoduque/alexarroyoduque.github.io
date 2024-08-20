@@ -27,7 +27,7 @@ export class PoPageProfile extends LitElement {
             title: 'Alejandro Arroyo Duque',
             img: './images/alex.jpg',
             subtitle: 'Front-end developer',
-            description: 'Apasionado en explotar el potencial de la web. En mi tiempo libre creo proyectos experimentales de videojuegos y lancé el podcast #PixelOculto para hablar de ellos. Además continuamente busco aprender sobre otras áreas como UX, agilismo, etc.',
+            description: 'Soy un apasionado de la web, siempre buscando llevarla al límite para explotar todo su potencial. En mis ratos libres, creo proyectos experimentales de videojuegos, explorando nuevas tecnologías y mantenerme en constante aprendizaje. Además, lancé el podcast #PixelOculto para compartir mi afición. Siempre estoy explorando nuevas áreas, como UX, agilismo o cualquier tema que me mantenga motivado.',
           }
         ]}></po-container-items>
 
