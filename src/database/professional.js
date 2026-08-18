@@ -25,11 +25,11 @@ const projects = [
       subtitle: 'BBVA Tech, 2024 - Actualidad',
       img: './images/professional/bbva-disciplina.jpg',
       description: 'Aplicando Cells para el desarrollo de piezas core y estándares de calidad.',
-      modalTemplate: './modals/professional/bbva-cells-apps.html'
+      modalTemplate: './modals/professional/bbva-disciplina.html'
   },
   {
       title: 'BBVA - Cells Apps',
-      subtitle: 's|ngular, 2016 - 2024',
+      subtitle: 'SNGULAR, 2016 - 2024',
       img: './images/professional/bbva-cells.jpg',
       description: 'Cells es la propuesta de BBVA para el desarrollo front basada en webcomponents.',
       modalTemplate: './modals/professional/bbva-cells-apps.html'
