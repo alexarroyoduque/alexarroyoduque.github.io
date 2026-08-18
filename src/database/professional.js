@@ -1,8 +1,14 @@
 const companies = [
   {
+    title: 'BBVA Technology',
+    img: './images/companies/bbva-technology.jpg',
+    subtitle: 'Octubre 2024 - Actualidad',
+    description: 'Desarrollo front aplicado a web componentes.',
+  },
+  {
     title: 'SNGULAR',
     img: './images/companies/sngular.jpg',
-    subtitle: 'Mayo 2016 - Actualidad',
+    subtitle: 'Mayo 2016 - Octubre 2024',
     description: 'Principalmente dedicado al desarrollo de proyectos con web componentes en BBVA.',
   },
   {
@@ -15,8 +21,15 @@ const companies = [
 
 const projects = [
   {
+      title: 'Disciplina Empresas',
+      subtitle: 'BBVA Tech, 2024 - Actualidad',
+      img: './images/professional/bbva-disciplina.jpg',
+      description: 'Aplicando Cells para el desarrollo de piezas core y estándares de calidad.',
+      modalTemplate: './modals/professional/bbva-cells-apps.html'
+  },
+  {
       title: 'BBVA - Cells Apps',
-      subtitle: 's|ngular, 2016 - actualidad',
+      subtitle: 's|ngular, 2016 - 2024',
       img: './images/professional/bbva-cells.jpg',
       description: 'Cells es la propuesta de BBVA para el desarrollo front basada en webcomponents.',
       modalTemplate: './modals/professional/bbva-cells-apps.html'
