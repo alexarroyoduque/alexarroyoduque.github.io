@@ -1,5 +1,12 @@
 const projects = [
   {
+    title: 'Castlevania: Harmony of dissonance REharmonized',
+    img: './images/personal/REharmonized.jpg',
+    subtitle: '2026',
+    description: 'Parche musical',
+    modalTemplate: './modals/personal/reharmonized.html'
+  },
+  {
     title: 'MicroMachines Military parche al español',
     img: './images/personal/micromachines.jpg',
     subtitle: '2024',
