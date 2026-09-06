@@ -4,7 +4,7 @@ const projects = [
     img: './images/personal/REharmonized.jpg',
     subtitle: '2026',
     description: 'Parche musical',
-    modalTemplate: './modals/personal/reharmonized.html'
+    modalTemplate: './modals/personal/REharmonized.html'
   },
   {
     title: 'MicroMachines Military parche al español',
