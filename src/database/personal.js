@@ -1,10 +1,10 @@
 const projects = [
   {
-    title: 'Castlevania: Harmony of dissonance REharmonized',
-    img: './images/personal/reharmonized.jpg',
+    title: 'Hacks de Castlevania: Harmony of dissonance',
+    img: './images/personal/harmony-of-dissonance.jpg',
     subtitle: '2026',
-    description: 'Parche musical',
-    modalTemplate: './modals/personal/reharmonized.html'
+    description: 'Parches para el videojuego de Game Boy Advance.',
+    modalTemplate: './modals/personal/harmony-of-dissonance.html'
   },
   {
     title: 'MicroMachines Military parche al español',
